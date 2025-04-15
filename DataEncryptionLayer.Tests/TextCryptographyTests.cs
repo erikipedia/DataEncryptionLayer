@@ -1,5 +1,4 @@
 ﻿using System.Security.Cryptography;
-using DataEncryptionLayer;
 
 namespace DataEncryptionLayer.Tests;
 

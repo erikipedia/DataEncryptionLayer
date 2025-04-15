@@ -4,190 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3fedbcd-527c-4f50-8e1b-db1039f46cfc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.DataEncryptionLayer/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.DataEncryptionLayer/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.DataEncryptionLayer/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.DataEncryptionLayer/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.DataEncryptionLayer/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.DataEncryptionLayer/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/DataEncryptionLayer.Tests.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/TextCryptographyTests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/.msCoverageSourceRootsMapping_DataEncryptionLayer.Tests" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/.msCoverageSourceRootsMapping_DataEncryptionLayerTests" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/CoverletSourceRootsMapping_DataEncryptionLayer.Tests" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/CoverletSourceRootsMapping_DataEncryptionLayerTests" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/DataEncryptionLayer.Tests.deps.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/DataEncryptionLayer.Tests.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/DataEncryptionLayer.Tests.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/DataEncryptionLayer.Tests.runtimeconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/DataEncryptionLayer.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/DataEncryptionLayer.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/DataEncryptionLayerTests.deps.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/DataEncryptionLayerTests.runtimeconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/Microsoft.TestPlatform.CommunicationUtilities.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/Microsoft.TestPlatform.CoreUtilities.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/Microsoft.TestPlatform.CrossPlatEngine.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/Microsoft.TestPlatform.PlatformAbstractions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/Microsoft.TestPlatform.Utilities.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/Microsoft.VisualStudio.CodeCoverage.Shim.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/Microsoft.VisualStudio.TestPlatform.Common.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/Microsoft.VisualStudio.TestPlatform.ObjectModel.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/NUnit3.TestAdapter.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/NUnit3.TestAdapter.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/Newtonsoft.Json.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/cs/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/cs/Microsoft.TestPlatform.CoreUtilities.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/cs/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/cs/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/cs/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/de/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/de/Microsoft.TestPlatform.CoreUtilities.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/de/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/de/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/de/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/es/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/es/Microsoft.TestPlatform.CoreUtilities.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/es/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/es/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/es/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/fr/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/fr/Microsoft.TestPlatform.CoreUtilities.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/fr/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/fr/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/fr/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/it/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/it/Microsoft.TestPlatform.CoreUtilities.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/it/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/it/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/it/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/ja/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/ja/Microsoft.TestPlatform.CoreUtilities.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/ja/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/ja/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/ja/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/ko/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/ko/Microsoft.TestPlatform.CoreUtilities.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/ko/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/ko/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/ko/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/nunit.engine.api.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/nunit.engine.core.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/nunit.engine.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/nunit.framework.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/nunit.framework.legacy.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/pl/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/pl/Microsoft.TestPlatform.CoreUtilities.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/pl/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/pl/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/pl/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/pt-BR/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/pt-BR/Microsoft.TestPlatform.CoreUtilities.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/pt-BR/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/pt-BR/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/pt-BR/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/ru/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/ru/Microsoft.TestPlatform.CoreUtilities.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/ru/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/ru/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/ru/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/testcentric.engine.metadata.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/testhost.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/testhost.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/tr/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/tr/Microsoft.TestPlatform.CoreUtilities.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/tr/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/tr/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/tr/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/zh-Hans/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/zh-Hans/Microsoft.TestPlatform.CoreUtilities.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/zh-Hans/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/zh-Hans/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/zh-Hans/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/zh-Hant/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/zh-Hant/Microsoft.TestPlatform.CoreUtilities.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/zh-Hant/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/zh-Hant/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/bin/Debug/net9.0/zh-Hant/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/obj/DataEncryptionLayer.Tests.csproj.nuget.dgspec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/obj/DataEncryptionLayer.Tests.csproj.nuget.g.props" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/obj/DataEncryptionLayer.Tests.csproj.nuget.g.targets" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/obj/DataEncryptionLayerTests.csproj.nuget.dgspec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/obj/DataEncryptionLayerTests.csproj.nuget.g.props" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/obj/DataEncryptionLayerTests.csproj.nuget.g.targets" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/obj/Debug/net9.0/.NETCoreApp,Version=v9.0.AssemblyAttributes.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/obj/Debug/net9.0/DataEncr.89E4854A.Up2Date" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/obj/Debug/net9.0/DataEncryptionLayer.Tests.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/obj/Debug/net9.0/DataEncryptionLayer.Tests.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/obj/Debug/net9.0/DataEncryptionLayer.Tests.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/obj/Debug/net9.0/DataEncryptionLayer.Tests.GlobalUsings.g.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/obj/Debug/net9.0/DataEncryptionLayer.Tests.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/obj/Debug/net9.0/DataEncryptionLayer.Tests.csproj.AssemblyReference.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/obj/Debug/net9.0/DataEncryptionLayer.Tests.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/obj/Debug/net9.0/DataEncryptionLayer.Tests.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/obj/Debug/net9.0/DataEncryptionLayer.Tests.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/obj/Debug/net9.0/DataEncryptionLayer.Tests.genruntimeconfig.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/obj/Debug/net9.0/DataEncryptionLayer.Tests.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/obj/Debug/net9.0/DataEncryptionLayer.Tests.sourcelink.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/obj/Debug/net9.0/DataEncryptionLayerTests.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/obj/Debug/net9.0/DataEncryptionLayerTests.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/obj/Debug/net9.0/DataEncryptionLayerTests.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/obj/Debug/net9.0/DataEncryptionLayerTests.GlobalUsings.g.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/obj/Debug/net9.0/DataEncryptionLayerTests.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/obj/Debug/net9.0/DataEncryptionLayerTests.csproj.AssemblyReference.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/obj/Debug/net9.0/DataEncryptionLayerTests.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/obj/Debug/net9.0/DataEncryptionLayerTests.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/obj/Debug/net9.0/DataEncryptionLayerTests.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/obj/Debug/net9.0/DataEncryptionLayerTests.genruntimeconfig.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/obj/Debug/net9.0/DataEncryptionLayerTests.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/obj/Debug/net9.0/DataEncryptionLayerTests.sourcelink.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/obj/Debug/net9.0/ref/DataEncryptionLayer.Tests.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/obj/Debug/net9.0/ref/DataEncryptionLayerTests.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/obj/Debug/net9.0/refint/DataEncryptionLayer.Tests.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/obj/Debug/net9.0/refint/DataEncryptionLayerTests.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/obj/project.assets.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/obj/project.nuget.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/obj/project.packagespec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/obj/rider.project.restore.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.sln" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.sln.DotSettings.user" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer/CryptoStreamReader.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer/DataEncryptionLayer.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer/FileCryptography.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer/FileSigning.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer/NumberSigning.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer/TextCryptography.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer/Utilities.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer/bin/Debug/net9.0/DataEncryptionLayer.deps.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer/bin/Debug/net9.0/DataEncryptionLayer.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer/bin/Debug/net9.0/DataEncryptionLayer.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer/obj/DataEncryptionLayer.csproj.nuget.dgspec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer/obj/DataEncryptionLayer.csproj.nuget.g.props" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer/obj/DataEncryptionLayer.csproj.nuget.g.targets" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer/obj/Debug/net9.0/.NETCoreApp,Version=v9.0.AssemblyAttributes.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer/obj/Debug/net9.0/DataEncryptionLayer.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer/obj/Debug/net9.0/DataEncryptionLayer.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer/obj/Debug/net9.0/DataEncryptionLayer.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer/obj/Debug/net9.0/DataEncryptionLayer.GlobalUsings.g.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer/obj/Debug/net9.0/DataEncryptionLayer.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer/obj/Debug/net9.0/DataEncryptionLayer.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer/obj/Debug/net9.0/DataEncryptionLayer.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer/obj/Debug/net9.0/DataEncryptionLayer.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer/obj/Debug/net9.0/DataEncryptionLayer.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer/obj/Debug/net9.0/DataEncryptionLayer.sourcelink.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer/obj/Debug/net9.0/ref/DataEncryptionLayer.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer/obj/Debug/net9.0/refint/DataEncryptionLayer.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer/obj/project.assets.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer/obj/project.nuget.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer/obj/project.packagespec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer/obj/rider.project.restore.info" afterDir="false" />
+    <list default="true" id="b3fedbcd-527c-4f50-8e1b-db1039f46cfc" name="Changes" comment="Add class library and first unit tests">
+      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/NumberSigningTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DataEncryptionLayer/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DataEncryptionLayer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DataEncryptionLayer/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataEncryptionLayer.Tests/TextCryptographyTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/TextCryptographyTests.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DpaMonitoringSettings">
+    <option name="firstShow" value="false" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -207,6 +36,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/DataEncryptionLayer.Tests/TextCryptographyTest.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -220,6 +50,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "8e675475-efae-4582-897b-bd6ac778a3f0.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
@@ -242,15 +73,27 @@
       <option name="presentableId" value="Default" />
       <updated>1744758788987</updated>
       <workItem from="1744758790433" duration="387000" />
-      <workItem from="1744759211189" duration="1039000" />
+      <workItem from="1744759211189" duration="1955000" />
     </task>
+    <task id="LOCAL-00001" summary="Add class library and first unit tests">
+      <option name="closed" value="true" />
+      <created>1744760318079</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1744760318079</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Add class library and first unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add class library and first unit tests" />
   </component>
 </project>
