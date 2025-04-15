@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3fedbcd-527c-4f50-8e1b-db1039f46cfc" name="Changes" comment="Add class library and first unit tests">
-      <change afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/NumberSigningTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.DataEncryptionLayer/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.DataEncryptionLayer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DataEncryptionLayer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataEncryptionLayer.Tests/TextCryptographyTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataEncryptionLayer.Tests/TextCryptographyTests.cs" afterDir="false" />
-    </list>
+    <list default="true" id="b3fedbcd-527c-4f50-8e1b-db1039f46cfc" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -73,7 +68,7 @@
       <option name="presentableId" value="Default" />
       <updated>1744758788987</updated>
       <workItem from="1744758790433" duration="387000" />
-      <workItem from="1744759211189" duration="1955000" />
+      <workItem from="1744759211189" duration="2001000" />
     </task>
     <task id="LOCAL-00001" summary="Add class library and first unit tests">
       <option name="closed" value="true" />
@@ -83,7 +78,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744760318079</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Remove Unused Directives">
+      <option name="closed" value="true" />
+      <created>1744761207895</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1744761207895</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -94,6 +97,7 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Add class library and first unit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add class library and first unit tests" />
+    <MESSAGE value="Remove Unused Directives" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove Unused Directives" />
   </component>
 </project>
