@@ -116,7 +116,7 @@ public class FileCryptography
     public static void Encrypt(string fileToEncrypt, string password)
     {
         // convert the password to a 48-byte array, and render the key/block pair
-        Rfc2898DeriveBytes pdb = new Rfc2898DeriveBytes(password, Utilities.Salt);
+        Rfc2898DeriveBytes pdb = new Rfc2898DeriveBytes(password, Utilities.Salt, 1000, HashAlgorithmName.SHA1);
         byte[] aesKey = pdb.GetBytes(32);
         byte[] aesIv = pdb.GetBytes(16);
 
@@ -144,7 +144,7 @@ public class FileCryptography
         // read the input file into a byte array
         FileStream fsInput = new FileStream(fileToEncrypt, FileMode.Open, FileAccess.Read);
         byte[] byteArrayInput = new byte[fsInput.Length];
-        fsInput.Read(byteArrayInput, 0, byteArrayInput.Length);
+        fsInput.ReadExactly(byteArrayInput, 0, byteArrayInput.Length);
         fsInput.Close();
 
         // send the input array to the encrypter
@@ -189,7 +189,7 @@ public class FileCryptography
     public static void Decrypt(string fileToDecrypt, string password)
     {
         // convert the password to a 48-byte array, and render the key/block pair
-        Rfc2898DeriveBytes pdb = new Rfc2898DeriveBytes(password, Utilities.Salt);
+        Rfc2898DeriveBytes pdb = new Rfc2898DeriveBytes(password, Utilities.Salt, 1000,  HashAlgorithmName.SHA1);
         byte[] aesKey = pdb.GetBytes(32);
         byte[] aesIv = pdb.GetBytes(16);
 
@@ -221,7 +221,7 @@ public class FileCryptography
         // read the encrypted file
         FileStream fsInput = new FileStream(fileToDecrypt, FileMode.Open, FileAccess.Read);
         byte[] byteArrayInput = new byte[fsInput.Length];
-        fsInput.Read(byteArrayInput, 0, byteArrayInput.Length);
+        fsInput.ReadExactly(byteArrayInput, 0, byteArrayInput.Length);
         fsInput.Close();
 
         // call the base-level decryptor and read into an output stream

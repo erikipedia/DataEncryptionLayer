@@ -65,7 +65,8 @@ public class FileSigning
         
         // read the file into an MD5 hash table
         using FileStream fs = new FileStream(filename, FileMode.Open, FileAccess.Read);
-        MD5 md5 = new MD5CryptoServiceProvider();
+
+        MD5 md5 = MD5.Create();
         byte[] byteArrayOutput = md5.ComputeHash(fs);
         fs.Close();
 

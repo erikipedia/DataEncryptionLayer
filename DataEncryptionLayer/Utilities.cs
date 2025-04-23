@@ -128,9 +128,9 @@ public static class Utilities
         // fast check failed, look at a sample of the data
         long restorePosition = inputStream.Position;
         byte[] testChunk = new byte[blockSize];
-        inputStream.Read(testChunk, 0, testChunk.Length);
+        inputStream.ReadExactly(testChunk, 0, testChunk.Length);
         inputStream.Position = restorePosition;
-
+        
         return IsDataEncrypted(testChunk);
     }
     
@@ -143,13 +143,12 @@ public static class Utilities
     /// Get an AES decryptor transform, defaulting to default key/iv.
     /// </summary>
     /// <returns>The decryptor</returns>
-    public static ICryptoTransform GetDecryptor(byte[] key = null, byte[] iv = null)
+    public static ICryptoTransform GetDecryptor(byte[]? key = null, byte[]? iv = null)
     {
-        AesManaged aes = new AesManaged
-        {
-            Key = key ?? DefaultKey,
-            IV = iv ?? DefaultIv
-        };
+        Aes aes = Aes.Create();
+        aes.Key = key ?? DefaultKey;
+        aes.IV = iv ?? DefaultIv;
+        
         return aes.CreateDecryptor();
     }
 
@@ -157,13 +156,12 @@ public static class Utilities
     /// Get an AES encryptor transform, defaulting to default key/iv.
     /// </summary>
     /// <returns>The encryptor</returns>
-    public static ICryptoTransform GetEncryptor(byte[] key = null, byte[] iv = null)
+    public static ICryptoTransform GetEncryptor(byte[]? key = null, byte[]? iv = null)
     {
-        AesManaged aes = new AesManaged
-        {
-            Key = key ?? DefaultKey,
-            IV = iv ?? DefaultIv
-        };
+        Aes aes = Aes.Create();
+        aes.Key = key ?? DefaultKey;
+        aes.IV = iv ?? DefaultIv;
+        
         return aes.CreateEncryptor();
     }
 
