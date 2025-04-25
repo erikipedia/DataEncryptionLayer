@@ -24,4 +24,11 @@
       <ProjectReference Include="..\DataEncryptionLayer\DataEncryptionLayer.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Remove="Resources\TestFile.txt" />
+      <Resource Include="Resources\TestFile.txt">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Resource>
+    </ItemGroup>
+
 </Project>
