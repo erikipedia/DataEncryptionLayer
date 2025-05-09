@@ -26,9 +26,9 @@
 
     <ItemGroup>
       <None Remove="Resources\TestFile.txt" />
-      <Resource Include="Resources\TestFile.txt">
+      <Content Include="Resources\TestFile.txt">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      </Resource>
+      </Content>
     </ItemGroup>
 
 </Project>
