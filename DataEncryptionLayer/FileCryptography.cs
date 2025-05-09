@@ -5,7 +5,7 @@ namespace DataEncryptionLayer;
 /// <summary>
 /// Static class for encrypting and decrypting files
 /// </summary>
-public class FileCryptography
+public static class FileCryptography
 {
     #region File IO Factory Methods
     

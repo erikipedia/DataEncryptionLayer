@@ -5,7 +5,7 @@ namespace DataEncryptionLayer;
 /// <summary>
 /// Simple number validation using the Luhn algorithm
 /// </summary>
-public class NumberSigning
+public static class NumberSigning
 {
     /// <summary>
     /// Determine if a number is valid using the Luhn check digit algorithm

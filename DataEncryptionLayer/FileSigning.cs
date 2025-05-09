@@ -5,7 +5,7 @@ namespace DataEncryptionLayer;
 /// <summary>
 /// A static class for comparing/inspecting files using MD5 cryptography
 /// </summary>
-public class FileSigning
+public static class FileSigning
 {
     /// <summary>
     /// Check a file for internal changes
