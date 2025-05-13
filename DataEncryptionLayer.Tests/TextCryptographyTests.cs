@@ -14,6 +14,7 @@ public class TextCryptographyTests
         string encryptedText = TextCryptography.Encrypt(textToEncrypt);
         Assert.That(encryptedText, Is.Not.EqualTo(textToEncrypt));
         string decryptedText = TextCryptography.Decrypt(encryptedText);
+        Console.WriteLine(encryptedText + ":" + decryptedText);
         Assert.That(decryptedText, Is.EqualTo(textToEncrypt));
     }
 
@@ -26,6 +27,7 @@ public class TextCryptographyTests
         Assert.That(TextCryptography.Encrypt(textToEncrypt), Is.Not.EqualTo(encryptedText));
         Assert.Throws<CryptographicException>(() => TextCryptography.Decrypt(encryptedText, "WrongPassword!"));
         string decryptedText = TextCryptography.Decrypt(encryptedText, "Un1v3rs3!");
+        Console.WriteLine(encryptedText + ":" + decryptedText);
         Assert.That(decryptedText, Is.EqualTo(textToEncrypt));
     }
 }

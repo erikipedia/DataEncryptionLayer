@@ -9,6 +9,7 @@ public class NumberSigningTests
     {
         string number = "412345678901234";
         string checkDigit = NumberSigning.ComputeCheckDigit(number);
+        Console.WriteLine(number + ":" + checkDigit);
         Assert.That(checkDigit, Is.EqualTo("9"));
         bool checkNumber = NumberSigning.CheckNumber("4123456789012349");
         Assert.That(checkNumber, Is.True);
