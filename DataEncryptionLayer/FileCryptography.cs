@@ -7,8 +7,90 @@ namespace DataEncryptionLayer;
 /// </summary>
 public static class FileCryptography
 {
+    /// <summary>
+    /// The extension given to encrypted files
+    /// </summary>
+    private const string EncryptedExtension = ".crypt";
+
+    #region Path Helpers
+
+    /// <summary>
+    /// Work out the encrypted path for a plaintext file, folding the original extension
+    /// into the filename so that <see cref="GetDecryptedPath"/> can restore it.
+    /// "name.ext" becomes "name_ext.crypt"; a file with no extension becomes "name_.crypt".
+    /// </summary>
+    /// <param name="path">The plaintext path</param>
+    /// <returns>The encrypted path</returns>
+    private static string GetEncryptedPath(string path)
+    {
+        // only rewrite the filename: a directory may legitimately contain '.' or '_'
+        string directory = Path.GetDirectoryName(path) ?? string.Empty;
+        string name = Path.GetFileNameWithoutExtension(path);
+        string extension = Path.GetExtension(path);
+
+        // a trailing separator records "there was no extension", which keeps the
+        // transformation reversible for extensionless names that contain '_'
+        string encryptedName = $"{name}_{extension.TrimStart('.')}";
+
+        return Path.Combine(directory, encryptedName + EncryptedExtension);
+    }
+
+    /// <summary>
+    /// Work out the plaintext path for an encrypted file, restoring the extension that
+    /// <see cref="GetEncryptedPath"/> folded into the filename.
+    /// "name_ext.crypt" becomes "name.ext".
+    /// </summary>
+    /// <param name="path">The encrypted path</param>
+    /// <returns>The plaintext path</returns>
+    /// <exception cref="ArgumentException"></exception>
+    private static string GetDecryptedPath(string path)
+    {
+        // only inspect the filename: a directory may legitimately contain '.' or '_'
+        string directory = Path.GetDirectoryName(path) ?? string.Empty;
+        string name = Path.GetFileNameWithoutExtension(path);
+
+        int separator = name.LastIndexOf('_');
+        string decryptedName;
+        if (separator < 0)
+        {
+            // no recorded extension, so restore the name as it stands
+            decryptedName = name;
+        }
+        else
+        {
+            string extension = name[(separator + 1)..];
+            decryptedName = extension.Length > 0
+                ? $"{name[..separator]}.{extension}"
+                : name[..separator];
+        }
+
+        if (decryptedName.Length == 0) throw new ArgumentException("Cannot determine the original filename", nameof(path));
+
+        return Path.Combine(directory, decryptedName);
+    }
+
+    /// <summary>
+    /// Delete a file, ignoring any failure. Used to roll back a partial write without
+    /// masking the exception that caused the rollback.
+    /// </summary>
+    /// <param name="path">The file to delete</param>
+    private static void TryDelete(string path)
+    {
+        try
+        {
+            File.Delete(path);
+        }
+        catch
+        {
+            // best effort only: the original exception is the one worth reporting
+        }
+    }
+
+    #endregion
+
+
     #region File IO Factory Methods
-    
+
     /// <summary>
     /// Gets the file output stream.
     /// </summary>
@@ -35,8 +117,16 @@ public static class FileCryptography
         ArgumentException.ThrowIfNullOrEmpty(filename);
         
         Stream outputStream = File.Create(filename);
-        outputStream = new CryptoStream(outputStream, Utilities.GetEncryptor(aesKey, aesIv), CryptoStreamMode.Write);
-        return outputStream;
+        try
+        {
+            return new CryptoStream(outputStream, Utilities.GetEncryptor(aesKey, aesIv), CryptoStreamMode.Write);
+        }
+        catch
+        {
+            // don't leave the file handle open if the transform can't be built
+            outputStream.Dispose();
+            throw;
+        }
     }
 
     /// <summary>
@@ -52,14 +142,19 @@ public static class FileCryptography
         if (!File.Exists(filename)) throw new FileNotFoundException(filename);
         
         Stream inputStream = File.OpenRead(filename);
-
-        if (Utilities.IsStreamEncrypted(inputStream))
+        try
         {
             // we weren't given a password, so try to pass the defaults
-            inputStream = GetFileInputStream(inputStream, Utilities.DefaultKey, Utilities.DefaultIv);
+            return Utilities.IsStreamEncrypted(inputStream)
+                ? GetFileInputStream(inputStream, Utilities.DefaultKey, Utilities.DefaultIv)
+                : inputStream;
         }
-
-        return inputStream;
+        catch
+        {
+            // don't leave the file handle open if detection or the transform fails
+            inputStream.Dispose();
+            throw;
+        }
     }
     
     /// <summary>
@@ -77,8 +172,16 @@ public static class FileCryptography
         if (!File.Exists(filename)) throw new FileNotFoundException(filename);
         
         Stream inputStream = File.OpenRead(filename);
-        inputStream = GetFileInputStream(inputStream, aesKey, aesIv);
-        return inputStream;
+        try
+        {
+            return GetFileInputStream(inputStream, aesKey, aesIv);
+        }
+        catch
+        {
+            // don't leave the file handle open if the transform can't be built
+            inputStream.Dispose();
+            throw;
+        }
     }
     
     /// <summary>
@@ -116,7 +219,7 @@ public static class FileCryptography
     public static void Encrypt(string fileToEncrypt, string password)
     {
         // convert the password to a 48-byte array, and render the key/block pair
-        Rfc2898DeriveBytes pdb = new Rfc2898DeriveBytes(password, Utilities.Salt, 1000, HashAlgorithmName.SHA1);
+        using Rfc2898DeriveBytes pdb = new Rfc2898DeriveBytes(password, Utilities.Salt, 1000, HashAlgorithmName.SHA1);
         byte[] aesKey = pdb.GetBytes(32);
         byte[] aesIv = pdb.GetBytes(16);
 
@@ -137,31 +240,21 @@ public static class FileCryptography
         ArgumentException.ThrowIfNullOrEmpty(fileToEncrypt);
         if (!File.Exists(fileToEncrypt)) throw new FileNotFoundException(fileToEncrypt);
         
-        // write the new filename and path
-        string newFileString = fileToEncrypt.Substring(0, fileToEncrypt.LastIndexOf('.')) + "_" +
-                               fileToEncrypt.Substring(fileToEncrypt.LastIndexOf('.') + 1) + ".crypt";
-        
-        // read the input file into a byte array
-        FileStream fsInput = new FileStream(fileToEncrypt, FileMode.Open, FileAccess.Read);
-        byte[] byteArrayInput = new byte[fsInput.Length];
-        fsInput.ReadExactly(byteArrayInput, 0, byteArrayInput.Length);
-        fsInput.Close();
+        // work out the new filename and path
+        string newFileString = GetEncryptedPath(fileToEncrypt);
 
-        // send the input array to the encrypter
-        byte[] byteArrayOutput = Utilities.Encrypt(byteArrayInput, aesKey, aesIv);
-        FileStream fsOutput = new FileStream(newFileString, FileMode.Create, FileAccess.Write);
-        
-        // write the encrypted data to the filestream
+        // read the input file and send it to the encrypter
+        byte[] byteArrayOutput = Utilities.Encrypt(File.ReadAllBytes(fileToEncrypt), aesKey, aesIv);
+
+        // write the encrypted data, then retire the original
         try
         {
-            fsOutput.Write(byteArrayOutput, 0, byteArrayOutput.Length);
-            fsOutput.Close();
+            File.WriteAllBytes(newFileString, byteArrayOutput);
             File.Delete(fileToEncrypt);
         }
         catch
         {
-            fsOutput.Close();
-            File.Delete(newFileString);
+            TryDelete(newFileString);
             throw;
         }
     }
@@ -189,7 +282,7 @@ public static class FileCryptography
     public static void Decrypt(string fileToDecrypt, string password)
     {
         // convert the password to a 48-byte array, and render the key/block pair
-        Rfc2898DeriveBytes pdb = new Rfc2898DeriveBytes(password, Utilities.Salt, 1000,  HashAlgorithmName.SHA1);
+        using Rfc2898DeriveBytes pdb = new Rfc2898DeriveBytes(password, Utilities.Salt, 1000, HashAlgorithmName.SHA1);
         byte[] aesKey = pdb.GetBytes(32);
         byte[] aesIv = pdb.GetBytes(16);
 
@@ -210,35 +303,24 @@ public static class FileCryptography
         // catch input exceptions
         ArgumentException.ThrowIfNullOrEmpty(fileToDecrypt);
         if (!File.Exists(fileToDecrypt)) throw new FileNotFoundException(fileToDecrypt);
-        if (fileToDecrypt.Substring(fileToDecrypt.LastIndexOf('.')) != ".crypt") throw new ArgumentException("Not a .crypt file", nameof(fileToDecrypt));
-        
-        // remove the .crypt extension
-        string newFileString = fileToDecrypt.Substring(0, fileToDecrypt.LastIndexOf('_')) + "." +
-                               fileToDecrypt.Substring(fileToDecrypt.LastIndexOf('_') + 1,
-                                   fileToDecrypt.LastIndexOf('.') -
-                                   fileToDecrypt.LastIndexOf('_') - 1);
-        
-        // read the encrypted file
-        FileStream fsInput = new FileStream(fileToDecrypt, FileMode.Open, FileAccess.Read);
-        byte[] byteArrayInput = new byte[fsInput.Length];
-        fsInput.ReadExactly(byteArrayInput, 0, byteArrayInput.Length);
-        fsInput.Close();
+        if (!Path.GetExtension(fileToDecrypt).Equals(EncryptedExtension, StringComparison.OrdinalIgnoreCase))
+            throw new ArgumentException($"Not a {EncryptedExtension} file", nameof(fileToDecrypt));
 
-        // call the base-level decryptor and read into an output stream
-        byte[] byteArrayOutput = Utilities.Decrypt(byteArrayInput, aesKey, aesIv);
-        FileStream fsOutput = new FileStream(newFileString, FileMode.Create, FileAccess.Write);
+        // restore the original filename and extension
+        string newFileString = GetDecryptedPath(fileToDecrypt);
 
-        // write the decrypted stream to the new file
+        // read the encrypted file and call the base-level decryptor
+        byte[] byteArrayOutput = Utilities.Decrypt(File.ReadAllBytes(fileToDecrypt), aesKey, aesIv);
+
+        // write the decrypted data, then retire the encrypted file
         try
         {
-            fsOutput.Write(byteArrayOutput, 0, byteArrayOutput.Length);
-            fsOutput.Close();
+            File.WriteAllBytes(newFileString, byteArrayOutput);
             File.Delete(fileToDecrypt);
         }
         catch
         {
-            fsOutput.Close();
-            File.Delete(newFileString);
+            TryDelete(newFileString);
             throw;
         }
     }

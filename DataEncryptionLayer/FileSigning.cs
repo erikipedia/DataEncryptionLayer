@@ -22,7 +22,7 @@ public static class FileSigning
         if (checksum.Length != 32) throw new ArgumentException("The checksum must be 32 characters long.", nameof(checksum));
         
         // calculate the file checksum value and compare
-        return ComputeChecksum(filename) == checksum.ToUpper();
+        return ComputeChecksum(filename).Equals(checksum, StringComparison.OrdinalIgnoreCase);
     }
     
     /// <summary>
@@ -44,11 +44,11 @@ public static class FileSigning
     /// Compute the MD5 checksum for a file
     /// </summary>
     /// <param name="filename">The file to check</param>
-    /// <returns>A 16-byte hexadecimal string</returns>
+    /// <returns>A 32-character uppercase hexadecimal string</returns>
     public static string ComputeChecksum(string filename)
     {
         // call the base checksum generator and return as string
-        return String.Join("", ComputeMd5Checksum(filename).Select(b => b.ToString("X2")).ToArray());
+        return Convert.ToHexString(ComputeMd5Checksum(filename));
     }
     
     /// <summary>
@@ -57,20 +57,15 @@ public static class FileSigning
     /// <param name="filename">The file to check</param>
     /// <returns>The MD5 checksum as a byte array</returns>
     /// <exception cref="FileNotFoundException"></exception>
-    private static IEnumerable<byte> ComputeMd5Checksum(string filename)
+    private static byte[] ComputeMd5Checksum(string filename)
     {
         // catch input exceptions
         ArgumentException.ThrowIfNullOrEmpty(filename);
         if (!File.Exists(filename)) throw new FileNotFoundException(filename);
-        
-        // read the file into an MD5 hash table
+
+        // read the file into an MD5 hash table and return the hash. The static helper
+        // avoids holding an MD5 instance that would need disposing.
         using FileStream fs = new FileStream(filename, FileMode.Open, FileAccess.Read);
-
-        MD5 md5 = MD5.Create();
-        byte[] byteArrayOutput = md5.ComputeHash(fs);
-        fs.Close();
-
-        // return the MD5 hash
-        return byteArrayOutput;
+        return MD5.HashData(fs);
     }
 }
