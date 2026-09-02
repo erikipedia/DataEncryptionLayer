@@ -30,10 +30,10 @@ public static class TextCryptography
     public static string Encrypt(string textToEncrypt, string password)
     {
         // convert the password into a 48-byte array, and render the key/block pair
-        Rfc2898DeriveBytes pdb = new Rfc2898DeriveBytes(password, Utilities.Salt, 1000, HashAlgorithmName.SHA1);
+        using Rfc2898DeriveBytes pdb = new Rfc2898DeriveBytes(password, Utilities.Salt, 1000, HashAlgorithmName.SHA1);
         byte[] aesKey = pdb.GetBytes(32);
         byte[] aesIv = pdb.GetBytes(16);
-        
+
         // call the overload using the new key/block
         return Encrypt(textToEncrypt, aesKey, aesIv);
     }
@@ -97,10 +97,10 @@ public static class TextCryptography
     public static string Decrypt(string textToDecrypt, string password)
     {
         // convert the password to a 48-byte array, and render the key/block pair
-        Rfc2898DeriveBytes pdb = new Rfc2898DeriveBytes(password, Utilities.Salt, 1000, HashAlgorithmName.SHA1);
+        using Rfc2898DeriveBytes pdb = new Rfc2898DeriveBytes(password, Utilities.Salt, 1000, HashAlgorithmName.SHA1);
         byte[] aesKey = pdb.GetBytes(32);
         byte[] aesIv = pdb.GetBytes(16);
-        
+
         // call the overload using the new key/block
         return Decrypt(textToDecrypt, aesKey, aesIv);
     }
